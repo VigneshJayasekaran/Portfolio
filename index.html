@@ -5,13 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vignesh Jayasekaran | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
 
 <header>
+    <img src="img.jpg" alt="Vignesh Jayasekaran" class="profile-photo">
   <h1>Vignesh Jayasekaran</h1>
-  <p>Computer Science Student | Full-Stack Developer | AI Enthusiast</p>
+   <p><span id="typed-text"></span></p>
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   <a href="VIGNESH_JAYASEKARAN_Resume.docx" download class="resume-button">Download Resume</a>
+   <button id="toggle-dark-mode" class="dark-mode-btn">🌙 Dark Mode</button>
+
 </header>
+
+<script>
+  var typed = new Typed('#typed-text', {
+    strings: ['Computer Science Student', 'Full-Stack Developer', 'AI Enthusiast', 'Quick Learner', 'Problem Solver'],
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop: true
+  });
+</script>
 
 <nav>
   <a href="#about">About</a>
@@ -36,16 +52,43 @@
   </ul>
 </section>
 
-<section id="projects" class="card">
+<section id="projects" data-aos="zoom-in">
   <h2>Projects</h2>
-  <ul>
-    <li><strong>College Query Chatbot:</strong> Flask & MongoDB chatbot for handling student queries with 60% manual load reduction.</li>
-    <li><strong>Expense Tracker App:</strong> Full-stack React/MongoDB app with Firebase OTP, personalized investment suggestions.</li>
-    <li><strong>Voice Assistant:</strong> Python-based desktop assistant with voice command support.</li>
-  </ul>
+  <div class="project-gallery">
+    
+    <div class="project-card">
+      <img src="chatbot.png" alt="College Chatbot Project">
+      <h3>College Query Chatbot</h3>
+      <p>Flask & MongoDB chatbot reducing manual load by 60%.</p>
+      <a href="https://github.com/VigneshJayasekaran/College-Chatbot.git" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+      <img src="expense.png" alt="Expense Tracker App">
+      <h3>Expense Tracker App</h3>
+      <p>Full-stack React/MongoDB app with OTP login and investments.</p>
+      <a href="https://github.com/VigneshJayasekaran/Expense-tracker.git" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+      <img src="voice.png" alt="Voice Assistant">
+      <h3>Voice Assistant</h3>
+      <p>Python-based desktop assistant with voice control.</p>
+      <a href="https://github.com/VigneshJayasekaran/Voice-Assistant.git" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+      <img src="nutrient.png" alt="Nutrient Tracker">
+      <h3>Nutrient Tracker</h3>
+      <p>Full-stack app with detection of Calories and Nutrients of food.</p>
+      <a href="https://github.com/VigneshJayasekaran/Nutrition-tracker.git" target="_blank">View on GitHub</a>
+    </div>
+
+  </div>
 </section>
 
-<section id="internships" class="card">
+
+<section id="internships" class="card" data-aos="zoom-in">
   <h2>Internships</h2>
   <ul>
     <li><strong>Frontend Developer – CodeAlpha:</strong> Music player and image gallery with REST API integrations.</li>
@@ -54,7 +97,7 @@
   </ul>
 </section>
 
-<section id="contact" class="card">
+<section id="contact" class="card" data-aos="zoom-in">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:vkvigneshjjj0@gmail.com">vkvigneshjjj0@gmail.com</a></p>
   <p>LinkedIn: <a href="https://www.linkedin.com/in/vignesh-jayasekaran" target="_blank">linkedin.com/in/vignesh-jayasekaran</a></p>
@@ -65,7 +108,17 @@
 <footer>
   &copy; 2025 Vignesh Jayasekaran
 </footer>
+<button id="scrollToTopBtn" title="Go to top">&#8679;</button>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,  // animation duration in ms
+    once: true       // animation only once when scrolled into view
+  });
+</script>
+
 
 <script src="script.js"></script>
+
 </body>
 </html>
